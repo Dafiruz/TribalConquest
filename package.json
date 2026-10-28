@@ -1,0 +1,16 @@
+{
+  "name": "tribalconquest",
+  "version": "0.1.0",
+  "description": "Offline singleplayer Tribal Wars-style strategy game with AI opponents. Build your village, farm barbarian villages, train nobles and conquer the world.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
