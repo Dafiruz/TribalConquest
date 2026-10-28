@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tribal Conquest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⚔ Tribal Conquest</h1>
+    <div class="speed-wrap">
+      <button class="speed-btn" data-speed="0">⏸ Pause</button>
+      <button class="speed-btn" data-speed="1">1×</button>
+      <button class="speed-btn" data-speed="10">10×</button>
+      <button class="speed-btn" data-speed="100">100×</button>
+    </div>
+    <div id="clock"></div>
+  </header>
+
+  <nav>
+    <button class="tab" data-view="map">🗺 Map</button>
+    <button class="tab" data-view="village">🏘 Village</button>
+    <button class="tab" data-view="reports">📜 Reports <span id="unread-badge" class="badge hidden"></span></button>
+    <button class="tab" data-view="world">🌍 World</button>
+  </nav>
+
+  <main>
+    <section id="view-map" class="view">
+      <div id="map-pane"><div id="map"></div></div>
+      <aside id="map-side"><div id="side-content"></div></aside>
+    </section>
+
+    <section id="view-village" class="view hidden">
+      <div id="village-select"></div>
+      <div id="village-detail"></div>
+    </section>
+
+    <section id="view-reports" class="view hidden">
+      <div class="toolbar"><button id="mark-all-read" class="btn">Mark all read</button></div>
+      <div id="reports-list"></div>
+    </section>
+
+    <section id="view-world" class="view hidden">
+      <div id="world-panel"></div>
+    </section>
+  </main>
+
+  <div id="defeat-banner" class="hidden">
+    <div class="defeat-box">
+      <h2>💀 You have been defeated</h2>
+      <p>The enemy has conquered all of your villages.</p>
+      <button class="btn" id="defeat-new-game">Start a new world</button>
+    </div>
+  </div>
+
+  <div id="toast" class="hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
